@@ -1,100 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html
   data-bs-theme="light"
   lang="en"
   style="--bs-primary: #023047; --bs-primary-rgb: 2, 48, 71"
 >
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Data Academy(1)</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/Lato.css" />
-    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css" />
-    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-icons.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
+
+  {% include "../partials/head.html" %}
 
   <body style="background: var(--bs-primary)">
-    <header
-      class="text-center text-white masthead"
-      style="
-        background: url('bg-masthead.jpg') no-repeat center center;
-        background-size: cover;
-        margin-bottom: -311px;
-        padding-bottom: 190px;
-      "
-    >
-      <nav
-        class="navbar navbar-light navbar-expand-md fixed-top bg-opacity-75 bg-light shadow py-3"
-      >
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="#"
-            ><span
-              style="
-                --bs-primary: #023047;
-                --bs-primary-rgb: 2, 48, 71;
-                color: #023047;
-                font-weight: bold;
-              "
-              >Data Academy</span
-            ></a
-          ><button
-            data-bs-toggle="collapse"
-            class="navbar-toggler"
-            data-bs-target="#navcol-2"
-          >
-            <span class="visually-hidden">Toggle navigation</span
-            ><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navcol-2">
-            <input
-              class="border rounded-pill flex-grow-1"
-              type="text"
-              style="
-                margin: 0px 222px 0px 20px;
-                margin-right: 222px;
-                height: 25px;
-              "
-            />
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Início</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="dropdown-toggle nav-link"
-                  aria-expanded="false"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="outside"
-                  href="#"
-                  >Conteúdos</a
-                >
-                <div class="dropdown-menu" style="border-radius: 0px">
-                    <a
-                    class="dropdown-item"
-                    href="https://dcstem.github.io/estatisticapython"
-                    style="--bs-body-color: #969696"
-                    >Estatística no Python</a
-                  ><a class="dropdown-item" href="https://dcstem.github.io/abp"
-                    >Aprendizagem Baseada em Problemas</a
-                  ><a class="dropdown-item" href="https://dcstem.github.io/problema"
-                    >Problema (ABP)</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Entrar</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cadastrar-se</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    
+    {% include "../partials/header.html" %}
+
     <section>
       <section class="position-relative py-4 py-xl-5" style="height: 900px">
         <div class="container">
@@ -279,6 +197,6 @@
         </div>
       </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'data_academy/js/bootstrap.min.js' %}"></script>
   </body>
 </html>
